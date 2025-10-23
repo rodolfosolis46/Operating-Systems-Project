@@ -35,6 +35,7 @@ public:
     int getMemoryRequired() const { return memoryRequired; }
     const vector<int>& getIoOperations() const { return ioOperations; }
 
+    // Not used for Process Assignment
     void summary() const;
 
 
