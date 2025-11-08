@@ -35,10 +35,12 @@ public:
     int getMemoryRequired() const { return memoryRequired; }
     const vector<int>& getIoOperations() const { return ioOperations; }
 
-    // Not used for Process Assignment
     void summary() const;
 
-
+    friend void scheduleFCFS(vector<Process>&);
+    friend void scheduleSJF(vector<Process>&);
+    friend void scheduleSRTF(vector<Process>&);
+    friend void printSchedule(const vector<Process>&, const string&);
 private:
     int pid;
     string state;
