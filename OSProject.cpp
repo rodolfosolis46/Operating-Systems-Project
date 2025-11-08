@@ -88,6 +88,29 @@ int main()
     done = p3.tickCPU(4, time += 4); // t=13
     printProcess(p3, time, done ? "p3 FINISHED" : "p3 RUN more");
 
+
+
+    // Scheduling Assignment
+    cout << endl << endl << endl << "Scheduling" << endl;
+
+    vector <Process> processes;
+    processes.push_back(p1);
+    processes.push_back(p2);
+    processes.push_back(p3);
+
+    vector<Process> FCFS = processes;
+    scheduleFCFS(FCFS);
+    printSchedule(FCFS, "FCFS");
+
+    vector<Process> SJF = processes;
+    scheduleSJF(SJF);
+    printSchedule(SJF, "SJF");
+
+    vector<Process> SRTF = processes;
+    scheduleSRTF(SRTF);
+    printSchedule(SRTF, "SRTF");
+
+
     return 0;
 
 }
